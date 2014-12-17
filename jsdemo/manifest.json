@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "My First Extension",
+	"version": "1.0",
+	"description": "微信上墙",
+	"browser_action": {
+		"default_icon": "favicon.ico"
+	},
+	"permissions": [
+		"http://*/",
+		"bookmarks",
+		"tabs",
+		"history"
+	] ,
+	"content_scripts": [
+		{
+			"matches": ["https://wx2.qq.com/*"],
+			// "css": ["mystyles.css"],
+			"js": ["jquery.min.js","magic_weixin.js"]
+		}
+	]
+}
